@@ -4,8 +4,8 @@
   --img-height: 430.71496063178px;
   --img-width: 604.72440945px;
   --offset: 188.976377955px;
-  /* --side-width: 56.692913386px; */
-  --side-width: 68.031496063px;
+  --side-width: 56.692913386px;
+  /* --side-width: 68.031496063px; */
   /* --side-width: 83.149606299px; */
   /* --side-width: 94.488188976px; */
   /* --side-width: 113.38582677px; */
@@ -70,7 +70,6 @@
   opacity: 0.35;
   z-index: 1;
   left: calc(-1 * var(--side-width));
-  filter: blur(4px);
 }
 
 #iso {
@@ -143,7 +142,6 @@ h1 {
 
 h1 p {
   width: 170px;
-  /* overflow: visible; */
   border: 6px solid;
   border-image: linear-gradient(to right, red, black);
   border-image-slice: 1;
