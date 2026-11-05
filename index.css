@@ -12,6 +12,7 @@
     /* --side-width: 120.94488189px; */
     --side-width: 162.51968504px;
     --blend-color: black;
+    --qr-side-length: 120px;
 }
 
 * {
@@ -89,8 +90,8 @@
 }
 
 #qr {
-    width: 120px;
-    height: 120px;
+    width: var(--qr-side-length);
+    height: var(--qr-side-length);
     position: relative;
     z-index: 2;
     display: block;
@@ -199,6 +200,7 @@ body {
 ol li::marker {
     color: red;
     font-size: 1.5em;
+    font-weight: bold;
 }
 
 #piece::before {
@@ -228,4 +230,42 @@ ol li::marker {
     height: 3px;
     position: relative;
     background: linear-gradient(to right, red, transparent);
+}
+
+#qr-container {
+    display: flex;
+}
+
+#scan-me-bubble {
+    width: var(--qr-side-length);
+    height: calc(var(--qr-side-length) / 3);
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    margin-left: 0.75em;
+    font-family: sans-serif;
+}
+
+#scan-me-bubble {
+    display: grid;
+    place-items: center;
+    position: relative;
+    border-radius: 0.5em;
+    font-weight: bold;
+    border-bottom-left-radius: 0;
+}
+
+#scan-me-bubble::before {
+    content: "";
+    display: block;
+    position: absolute;
+    /* background-color: white; */
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    top: 2em;
+    border-left: 0px solid transparent;
+    border-right: calc(var(--qr-side-length) / 5) solid transparent;
+    border-top: calc(var(--qr-side-length) / 5) solid white;
 }
